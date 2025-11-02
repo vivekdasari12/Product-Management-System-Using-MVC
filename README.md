@@ -1,5 +1,7 @@
 🧩 Product Management System Using MVC
+
 🧠 Project Overview
+
 The Product Management System is a full-stack web application built using the Spring Boot MVC framework.
 It provides a structured and efficient way to manage product data — allowing users to add, edit, delete, view, and store product details in a database.
 This project demonstrates a complete end-to-end implementation of the Model–View–Controller (MVC) architecture using Spring Boot, integrating front-end templates with a robust Java-based backend and a relational database.
