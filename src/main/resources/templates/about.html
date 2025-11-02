@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - MyStore</title>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+    <style>
+        .hero-about {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1350&q=80')
+                        center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-about h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .content-section {
+            padding: 60px 20px;
+        }
+
+        .content-section h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background-color: #212529;
+            color: #bbb;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" th:href="@{/}">MyStore</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/productform}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/addProduct}">Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/products}">Product List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" th:href="@{/about}">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-about">
+        <div class="container">
+            <h1>About MyStore</h1>
+            <p class="lead">Building better product experiences since 2025</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="content-section container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80"
+                     alt="About Us"
+                     class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2>Who We Are</h2>
+                <p>
+                    MyStore is a powerful and easy-to-use Product Management System designed to help businesses efficiently manage their products, inventory, and brand presence.
+                    We believe great tools lead to great business outcomes. That's why we focus on simplicity, speed, and scalability.
+                </p>
+                <p>
+                    Whether you're a small business or a growing enterprise, MyStore gives you the tools you need to stay organized and make smarter decisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Our Mission</h2>
+            <p class="lead text-muted">
+                To empower businesses with modern product management solutions that save time, reduce complexity, and drive growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="content-section container text-center">
+        <h2 class="fw-bold mb-5">Meet Our Team</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card team-card p-3">
+					<img th:src="@{/images/vivek1.JPG}" 
+					     class="card-img-top rounded-circle w-50 mx-auto mt-3" 
+					     alt="Team member">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Vivekananda Dasari</h5>
+                        <p class="card-text text-muted">Founder & Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card p-3">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="card-img-top rounded-circle w-50 mx-auto mt-3" alt="Team member">
+                    <div class="card-body">
+                        <h5 class="card-title">Ravi Kumar</h5>
+                        <p class="card-text text-muted">Backend Engineer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card p-3">
+                    <img src="https://randomuser.me/api/portraits/women/47.jpg" class="card-img-top rounded-circle w-50 mx-auto mt-3" alt="Team member">
+                    <div class="card-body">
+                        <h5 class="card-title">Priya Sharma</h5>
+                        <p class="card-text text-muted">UI/UX Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">
+                &copy; 2025 MyStore. All Rights Reserved. |
+                <a th:href="@{/about}">About</a> |
+                <a th:href="@{/contact}">Contact</a> |
+                📞 <strong>+91 9110788980</strong> |
+                ✉️ <a href="mailto:vivekanandadasari313@gmail.com">vivekanandadasari313@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
